@@ -1,28 +1,29 @@
 {
-    "name": "minions-bundles-agency-workspace",
-    "private": true,
-    "version": "0.1.0",
-    "description": "Full-stack IT agency bundle — prospecting, outreach, CRM pipeline, delivery, billing, and client management for productized service businesses",
-    "type": "module",
-    "license": "MIT",
-    "author": "Mehdi Nabhani <mehdi@the-mehdi.com> (https://the-mehdi.com)",
-    "workspaces": [
-        "packages/*",
-        "apps/*"
-    ],
-    "scripts": {
-        "build": "pnpm --filter @minions-bundles-agency/sdk run build && pnpm --filter @minions-bundles-agency/cli run build && pnpm --filter minions-bundles-agency-docs run build && pnpm --filter minions-bundles-agency-blog run build && pnpm --filter minions-bundles-agency-web run build",
-        "deploy:blog": "pnpm --filter minions-bundles-agency-blog run build && netlify deploy --dir apps/blog/dist --prod",
-        "deploy:docs": "pnpm --filter minions-bundles-agency-docs run build && netlify deploy --dir apps/docs/dist --prod",
-        "deploy:web": "pnpm --filter minions-bundles-agency-web run build && netlify deploy --dir apps/web/dist --prod",
-        "test": "pnpm --filter @minions-bundles-agency/sdk run test",
-        "lint": "pnpm --filter @minions-bundles-agency/sdk run build && pnpm --filter @minions-bundles-agency/sdk run lint && pnpm --filter @minions-bundles-agency/cli run lint",
-        "deploy": "pnpm run deploy:blog"
-    },
-    "engines": {
-        "node": ">=20"
-    },
-    "devDependencies": {
-        "typescript": "^5.9.3"
-    }
+  "name": "minions-bundles-agency-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Full-stack IT agency bundle \u2014 prospecting, outreach, CRM pipeline, delivery, billing, and client management for productized service businesses",
+  "type": "module",
+  "license": "MIT",
+  "author": "Mehdi Nabhani <mehdi@the-mehdi.com> (https://the-mehdi.com)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "pnpm --filter @minions-bundles-agency/sdk run build && pnpm --filter @minions-bundles-agency/cli run build && pnpm --filter minions-bundles-agency-docs run build && pnpm --filter minions-bundles-agency-blog run build && pnpm --filter minions-bundles-agency-web run build",
+    "deploy:blog": "pnpm --filter minions-bundles-agency-blog run build && netlify deploy --dir apps/blog/dist --prod",
+    "deploy:docs": "pnpm --filter minions-bundles-agency-docs run build && netlify deploy --dir apps/docs/dist --prod",
+    "deploy:web": "pnpm --filter minions-bundles-agency-web run build && netlify deploy --dir apps/web/dist --prod",
+    "test": "pnpm --filter @minions-bundles-agency/sdk run test",
+    "lint": "pnpm --filter @minions-bundles-agency/sdk run build && pnpm --filter @minions-bundles-agency/sdk run lint && pnpm --filter @minions-bundles-agency/cli run lint",
+    "deploy": "pnpm run deploy:blog",
+    "stop": "pkill -f 'node.*minions-bundles-agency' || true"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
 }

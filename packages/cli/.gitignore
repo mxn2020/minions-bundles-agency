@@ -1,8 +1,8 @@
+
+# Added by AI Agent
 node_modules
 dist
 .env
-.DS_Store
-
-# Added by AI Agent
 .env.*
 !.env.example
+.DS_Store

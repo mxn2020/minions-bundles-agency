@@ -1,1 +1,7 @@
-name: minions-bundles-agency-web\ndescription: Standard compliance definition for minions-bundles-agency-web\npriority: high\ntags:\n  - foundation\n  - ecosystem\ndeploy_url: null\n
+name: minions-bundles-agency-web
+project_scope: main
+project_type: standalone
+description: Standard compliance definition for minions-bundles-agency-web
+priority: high
+deploy_url: null
+tags: null
